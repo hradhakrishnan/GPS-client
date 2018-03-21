@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#2C3E59</color>
+    <color name="colorPrimaryDark">#2C3E50</color>-->
+    <color name="colorPrimary">#22313f</color>
+    <color name="colorPrimaryDark">#2C3E50</color>
+    <color name="colorAccent">#C0392B</color>
+    <color name="autoBackground">#22313f</color>
+    <color name="autotext">#E4F1FE</color>
+    <color name="autotab">#C0392B</color>
+    <color name="settingsbtn">#EB974E</color>
+    <color name="autotabcolor">#E4F1FE</color>
+    <color name="greenbtn">#1BBC9B</color>
+</resources>

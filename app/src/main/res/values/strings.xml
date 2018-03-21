@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">GPS Client</string>
+    <string name="title_activity_maps">AZ Auto</string>
+        <string name="latitude_label">Latitude</string>
+        <string name="longitude_label">Longitude</string>
+
+    <string name="no_location_detected">
+        No location detected. Make sure location is enabled on the device.
+    </string>
+    <string name="help_intro_text">
+        <b>GPS Client</b> helps you send Location and Custom Information to a <b>Server or URL</b> of your choice as a JSON payload.
+    </string>
+    <string name="help_geo_text">
+        The <b>Geo Tab</b> displays the most recent Latitude and Longitude values.
+    </string>
+    <string name="help_vehicle_text">
+        The <b>Vehicle Tab</b> helps you save your custom information in fields vehicle name, driver name, Parameter 1 and Parameter 2.
+        <br></br>
+        Clicking <b>Save</b>, will store the data on your mobile.
+    </string>
+    <string name="help_settings_text">
+        <p>The <b>Settings Tab</b> helps you configure your http endpoint(server URL) and a polling interval.</p>
+        <p><br><b>Polling Interval</b> is in milliseconds, so setting 30,000 would equate to GPS position accessed every 30 seconds and sent to the http endpoint. </br></p>
+        <br></br>
+        <p>Clicking <b>Save</b> will store these fields on your mobile.</p>
+    </string>
+        <string name="help_schedule_text">
+        <p>Once the http end point and polling interval are configured and saved click <b>Schedule Job.</b> The job runs in the background Job and sends location + Custom Information from Vehicle tab to the http endpoint periodically for the pre-configured (polling interval) seconds.</p>
+        <p> You can close the app at this point and the job will run in the background.</p>
+    </string>
+    <string name="help_cancel_text">
+        <p>To cancel the scheduled/background job, open the app and click <b>Cancel Job </b> under settings tab. </p>
+    </string>
+
+    <string name="help_json_text">
+        <p><br>Your <b>Data</b> is sent to the http/https endpoint as a POST request with a JSON Body</br></p>
+    </string>
+
+    <string name="help_server_text">
+        <p>It is upto the user to setup the http endpoint/url to receive location date. A simple nodejs code on how to receive the data is demonstrated.</p>
+    </string>
+
+    <string name="help_disclaimer_text">
+        <p><br><b>KULU</b> does not store any of the user or location data. KULU holds no responsibility or liability on loss or damage incurred by its usage.</br></p>
+    </string>
+</resources>

@@ -1,0 +1,497 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="0dp"
+android:paddingRight="0dp"
+android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/autoBackground">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp" />
+
+
+  <!--  <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/tabtab">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/autotab"></TabWidget>
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- geo tab-->
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:orientation="vertical" android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp"
+       >
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:id="@+id/geo"
+                    android:background="@drawable/geo" />
+
+                <TextView
+                    android:id="@+id/coordinates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/lat_long_text_size"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/autotext"
+                    android:text="Coordinates"
+                    />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/latitude_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/lat_long_label_size"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="@string/latitude_label"
+                    android:textColor="@color/autotext"/>
+
+                <TextView
+                    android:id="@+id/latitude_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/lat_long_text_size"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/autotext"/>
+                <!--android:textStyle="bold"-->
+
+                <TextView
+                    android:id="@+id/longitude_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/lat_long_label_size"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="@string/longitude_label"
+                    android:textColor="@color/autotext"/>
+                <!--android:textStyle="bold"-->
+
+                <TextView
+                    android:id="@+id/longitude_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/lat_long_text_size"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/autotext"/>
+
+    </LinearLayout>
+</ScrollView>
+            </LinearLayout>
+
+            <!--Vehicle tab-->
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp"
+               >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/text_margin"
+                        android:id="@+id/imageView"
+                        android:background="@drawable/car" />
+
+                    <TextView
+                        android:id="@+id/longitude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="@dimen/text_margin"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/lat_long_text_size"
+                        android:fontFamily="sans-serif-thin"
+                        android:textColor="@color/autotext"
+                        android:text="Vehicle Details"/>
+                </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/vehiclename_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/lat_long_label_size"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/autotext"
+                    android:text="Vehicle Name :"/>
+
+
+                <EditText
+                    android:id="@+id/vehiclename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/lat_long_label_size"
+                    android:text="Vehicle Name"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/autotext" />
+
+                    </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/drivername_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/lat_long_label_size"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/autotext"
+                    android:text="Driver Name  :"/>
+
+                <EditText
+                    android:id="@+id/drivername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/lat_long_label_size"
+                    android:text="Driver Name"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/autotext"/>
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/param1_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="@dimen/text_margin"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/lat_long_label_size"
+                        android:fontFamily="sans-serif-thin"
+                        android:textColor="@color/autotext"
+                        android:text="Parameter 1   :"/>
+
+
+                    <EditText
+                        android:id="@+id/param1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="@dimen/text_margin"
+                        android:inputType="textPersonName"
+                        android:textSize="@dimen/lat_long_label_size"
+                        android:text="param1"
+                        android:ems="10"
+                        android:fontFamily="sans-serif-thin"
+                        android:textColor="@color/autotext" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/param2_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="@dimen/text_margin"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/lat_long_label_size"
+                        android:fontFamily="sans-serif-thin"
+                        android:textColor="@color/autotext"
+                        android:text="Parameter 2   :"/>
+
+
+                    <EditText
+                        android:id="@+id/param2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="@dimen/text_margin"
+                        android:inputType="textPersonName"
+                        android:textSize="@dimen/lat_long_label_size"
+                        android:text="param2"
+                        android:ems="10"
+                        android:fontFamily="sans-serif-thin"
+                        android:textColor="@color/autotext" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:onClick="Save"
+                    android:text="Save"
+                    android:theme="@style/AppTheme.Button.yellow"
+                   />
+            </LinearLayout>
+            </ScrollView>
+            </LinearLayout>
+
+            <!--Settings tab-->
+            <LinearLayout
+                android:id="@+id/tab3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/text_margin"
+                        android:id="@+id/imageView3"
+                        android:background="@drawable/settings" />
+
+                    <TextView
+                        android:id="@+id/settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="@dimen/text_margin"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/lat_long_text_size"
+                        android:fontFamily="sans-serif-thin"
+                        android:textColor="@color/autotext"
+                        android:text="Settings"/>
+                </LinearLayout>
+                <!--<TextView-->
+                    <!--android:id="@+id/longitude1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginStart="10dp"-->
+                    <!--android:layout_marginTop="@dimen/text_margin"-->
+                    <!--android:textIsSelectable="true"-->
+                    <!--android:textSize="@dimen/lat_long_text_size"-->
+                    <!--android:fontFamily="sans-serif-thin"-->
+                    <!--android:textColor="@color/azautotext"-->
+                    <!--android:text="Settings"/>-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/http_endpoint_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/lat_long_label_size"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/autotext"
+                    android:text="Http EndPoint"/>
+                <EditText
+                    android:id="@+id/http_endpoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/vehicle_name"
+                    android:text="http end point"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/autotext"/>
+                </LinearLayout>
+                <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/polling_interval_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/lat_long_label_size"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/autotext"
+                    android:text="Polling Interval"/>
+                <EditText
+                    android:id="@+id/polling_interval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/vehicle_name"
+                    android:text="5000"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/autotext"/>
+                    </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/btnSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:padding="16dp"
+                    android:onClick="Settings"
+                    android:text="Save"
+                    android:theme="@style/AppTheme.Button.yellow"/>
+
+                <Button
+                    android:id="@+id/schedule_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:padding="16dp"
+                    android:text="Schedule Job"
+                    android:theme="@style/AppTheme.Button.green"/>
+
+                <Button
+                    android:id="@+id/cancel_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Cancel Job"
+                    android:theme="@style/AppTheme.Button.red"/>
+                </LinearLayout>
+                </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

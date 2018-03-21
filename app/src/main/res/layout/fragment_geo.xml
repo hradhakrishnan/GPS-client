@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+         android:id="@+id/latitude_label"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="10dp"
+         android:layout_marginStart="10dp"
+         android:layout_marginTop="@dimen/text_margin"
+         android:textIsSelectable="true"
+         android:textSize="@dimen/lat_long_label_size"
+         android:fontFamily="sans-serif-thin"
+         android:text="@string/latitude_label"
+         android:textColor="@color/autotext"/>
+
+     <TextView
+     android:id="@+id/latitude_text"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="10dp"
+     android:layout_marginStart="10dp"
+     android:textIsSelectable="true"
+     android:textSize="@dimen/lat_long_text_size"
+     android:fontFamily="sans-serif-thin"
+     android:textColor="@color/autotext"/>
+    <!--android:textStyle="bold"-->
+
+     <TextView
+          android:id="@+id/longitude_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="@dimen/text_margin"
+          android:textIsSelectable="true"
+          android:textSize="@dimen/lat_long_label_size"
+          android:fontFamily="sans-serif-thin"
+          android:text="@string/longitude_label"
+          android:textColor="@color/autotext"/>
+    <!--android:textStyle="bold"-->
+
+    <TextView
+        android:id="@+id/longitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/lat_long_text_size"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="@color/autotext"/>
+
+</LinearLayout>

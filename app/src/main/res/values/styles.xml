@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/autotext</item>
+        <item name="colorControlHighlight">@color/autotext</item>
+    </style>
+    <style name="tabtab" parent="AppTheme">
+        <item name="colorPrimary">@color/autoBackground</item>
+        <item name="colorAccent">@color/autotext</item>
+        <item name="android:textColor">@color/autotext</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+
+    </style>
+    <style name="AppTheme.Button.red" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:textColor">@color/autotext</item>
+    </style>
+    <style name="AppTheme.Button.yellow" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/settingsbtn</item>
+        <item name="android:textColor">@color/autotext</item>
+    </style>
+    <style name="AppTheme.Button.green" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/greenbtn</item>
+        <item name="android:textColor">@color/autotext</item>
+    </style>
+</resources>
